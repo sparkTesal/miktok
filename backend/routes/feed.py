@@ -67,7 +67,7 @@ def get_next_card():
             else:
                 # LLM 不可用，返回错误
                 return jsonify({
-                    "error": "No cards available. LLM not configured - please set OPENAI_API_KEY or DEEPSEEK_API_KEY.",
+                    "error": "No cards available. LLM not configured - please set LLM_API_KEY in .env file.",
                     "generating": False,
                     "llm_available": False
                 }), 503  # 503 Service Unavailable

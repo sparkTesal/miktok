@@ -13,10 +13,10 @@ class Config:
     REDIS_PORT = int(os.getenv('REDIS_PORT', 6379))
     REDIS_PASSWORD = os.getenv('REDIS_PASSWORD', None)
     
-    # LLM 配置
-    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-    DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY')
-    DEEPSEEK_BASE_URL = os.getenv('DEEPSEEK_BASE_URL', 'https://api.deepseek.com')
+    # LLM 配置（统一使用 OpenAI 兼容格式）
+    LLM_API_KEY = os.getenv('LLM_API_KEY')
+    LLM_BASE_URL = os.getenv('LLM_BASE_URL')
+    LLM_MODEL = os.getenv('LLM_MODEL')
     
     # 后台工厂配置
     FACTORY_INTERVAL = int(os.getenv('FACTORY_INTERVAL', 3600))  # 每小时

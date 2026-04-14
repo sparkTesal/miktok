@@ -9,8 +9,8 @@ class LLMService:
         
         # 支持 OpenAI 兼容 API（DeepSeek、ChatAnywhere 等）
         try:
-            api_key = os.getenv('LLM_API_KEY') or os.getenv('DEEPSEEK_API_KEY') or os.getenv('OPENAI_API_KEY')
-            base_url = os.getenv('LLM_BASE_URL') or os.getenv('DEEPSEEK_BASE_URL')
+            api_key = os.getenv('LLM_API_KEY')
+            base_url = os.getenv('LLM_BASE_URL')
             model = os.getenv('LLM_MODEL')
             
             if api_key:
